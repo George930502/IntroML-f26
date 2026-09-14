@@ -22,7 +22,7 @@ description: Course policies and information.
 - Course title: 機器學習概論 / Introduction to Machine Learning
 - Instructor: Prof. Po-Chih Kuo (郭柏志)
 - Class time: T3T4R3 (Tuesdays 10:00–12:00, Thursdays 10:00–11:00)
-- Class location: Delta 105
+- Class location: C.L.Liu 炯朗 B1
 - Semester: 2026/09/07–2026/12/25 (16 weeks)
 
 ## Course description
