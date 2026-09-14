@@ -40,7 +40,7 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 <tr><td rowspan="2">12</td><td>11/24 (Tue)</td><td>Recurrent neural networks, Transformer</td><td></td><td><a href="assignments/HW4">HW4</a> release</td></tr>
 <tr><td>11/26 (Thu)</td><td>Transformer</td><td></td><td>HW3 demo</td></tr>
 <tr><td rowspan="2">13</td><td>12/01 (Tue)</td><td>Large language models</td><td></td><td></td></tr>
-<tr><td>12/03 (Thu)</td><td>Generative models (Autoencoder, GAN, Diffusion)</td><td></td><td></td></tr>
+<tr><td>12/03 (Thu)</td><td>Generative models</td><td></td><td></td></tr>
 <tr><td rowspan="2">14</td><td>12/08 (Tue)</td><td>Generative models, Reinforcement learning</td><td></td><td></td></tr>
 <tr><td>12/10 (Thu)</td><td>Reinforcement learning, Trustworthy AI</td><td></td><td></td></tr>
 <tr class="exam"><td rowspan="2">15</td><td>12/15 (Tue)</td><td>Final Exam</td><td></td><td>HW4 due</td></tr>
