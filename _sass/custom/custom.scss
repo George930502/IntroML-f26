@@ -43,8 +43,9 @@ iframe {
     background-color: #ddd;
   }
 
-  td:nth-child(3),
-  td:nth-child(4) {
+  // lecture and events are always the last two cells (rowspan shifts nth-child)
+  td:nth-last-child(2),
+  td:nth-last-child(1) {
     text-align: left;
   }
 
