@@ -80,10 +80,6 @@ These weights are subject to minor variation.
 - You are allowed to leave at any time (chat with your friends outside).
 - No roll call, but there might be a bonus for attendance.
 
-## Use of AI
-
-This course welcomes the unrestricted use of AI without any disclosure required.
-
 ## Statements on plagiarism
 
 Cheating or plagiarism on exams or labs will result in a zero score. You are encouraged to discuss course concepts with classmates, but the work you submit must be your own.
