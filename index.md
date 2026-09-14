@@ -8,7 +8,8 @@ seo:
   name: Introduction to Machine Learning
 ---
 
-# Introduction to Machine Learning {: .mb-2 }
+# Introduction to Machine Learning
+{: .mb-2 }
 Fall 2026 @ NTHU with Prof. Po-Chih Kuo
 {: .fs-6 .fw-300 }
 

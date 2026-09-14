@@ -5,9 +5,11 @@ nav_order: 1
 description: Course policies and information.
 ---
 
-# Syllabus {:.no_toc}
+# Syllabus
+{:.no_toc}
 
-## Table of contents {: .no_toc .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}

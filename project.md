@@ -5,9 +5,11 @@ nav_order: 3
 description: Term project guidelines.
 ---
 
-# Course Project {:.no_toc}
+# Course Project
+{:.no_toc}
 
-## Table of contents {: .no_toc .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}

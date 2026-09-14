@@ -7,7 +7,8 @@ has_toc: false
 description: Lab assignments.
 ---
 
-# Assignments {:.no_toc}
+# Assignments
+{:.no_toc}
 
 There are 4 labs, worth 40% of your grade in total.
 
@@ -17,7 +18,8 @@ There are 4 labs, worth 40% of your grade in total.
 - A demo with the TAs is required for each lab.
 - Avoid plagiarism. Cheating or plagiarism on labs will result in a zero score.
 
-## Table of Contents {: .no_toc .text-delta }
+## Table of Contents
+{: .no_toc .text-delta }
 
 <ul class="nav-list">
 {% assign hws = site.pages | where: 'parent', 'Assignments' | sort: 'nav_order' %}

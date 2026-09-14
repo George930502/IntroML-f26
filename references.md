@@ -5,7 +5,8 @@ nav_order: 5
 description: Textbooks and reading material.
 ---
 
-# References {:.no_toc}
+# References
+{:.no_toc}
 
 ## Textbook
 
