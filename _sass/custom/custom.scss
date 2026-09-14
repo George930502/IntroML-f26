@@ -49,12 +49,12 @@ iframe {
     text-align: left;
   }
 
-  tr.exam td {
+  tr.exam td:not([rowspan]) {
     background-color: #fdecea;
     font-weight: bold;
   }
 
-  tr.project td {
+  tr.project td:not([rowspan]) {
     background-color: #e8f0fb;
     font-weight: bold;
   }
