@@ -1,0 +1,39 @@
+title: IntroML-f26
+tagline: Introduction to Machine Learning, Fall 2026 @ NTHU
+description: Fall 2026 @ NTHU with Prof. Po-Chih Kuo
+author: HMI Lab, NTHU
+baseurl: "/IntroML-f26"
+url: "https://george930502.github.io"
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+aux_links:
+  eeclass:
+    - "https://eeclass.nthu.edu.tw/"
+footer_content: 'This website is built using <a href="https://kevinl.info/just-the-class/">Kevin Lin''s Just the Class</a> Jekyll template.'
+
+collections:
+  announcements:
+defaults:
+  - scope:
+      path: ""
+      type: announcements
+    values:
+      layout: announcement
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+liquid:
+  error_mode: strict
+  strict_filters: true

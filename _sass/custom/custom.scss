@@ -1,0 +1,60 @@
+// Just the Class dependencies
+@import "card";
+
+// Just the Class styles
+@import "announcement";
+@import "staffer";
+
+// Overrides
+code {
+  font-size: 14px;
+  padding: 0.2em 0.4em;
+  border: none;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+// Course schedule table (same look as PP-f26)
+.schedule-table {
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #336e96;
+    color: white;
+  }
+
+  td {
+    text-align: center;
+    border: 0;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(odd) td {
+    background-color: #ffffff;
+  }
+
+  tr:hover td {
+    background-color: #ddd;
+  }
+
+  td:nth-child(3),
+  td:nth-child(4) {
+    text-align: left;
+  }
+
+  tr.exam td {
+    background-color: #fdecea;
+    font-weight: bold;
+  }
+
+  tr.project td {
+    background-color: #e8f0fb;
+    font-weight: bold;
+  }
+}
