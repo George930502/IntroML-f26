@@ -58,4 +58,10 @@ iframe {
     background-color: #e8f0fb;
     font-weight: bold;
   }
+
+  // Week cell (rowspan) is never painted: no stripes, no hover, no exam/project color
+  td[rowspan] {
+    background-color: #ffffff;
+    font-weight: normal;
+  }
 }
