@@ -6,6 +6,19 @@
 @import "staffer";
 
 // Overrides
+.staffer {
+  align-items: center;
+
+  .staffer-image {
+    object-fit: cover;
+    width: 100px;
+  }
+
+  .staffer-meta {
+    display: block; // theme uses grid, which swallows the space after "Webpage:"
+  }
+}
+
 code {
   font-size: 14px;
   padding: 0.2em 0.4em;
