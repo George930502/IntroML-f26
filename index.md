@@ -22,9 +22,9 @@ Fall 2026 @ NTHU with Prof. Po-Chih Kuo
 
 <div class="staffer">
   <div>
-    <h3 class="staffer-name">Po-Chih Kuo (郭柏志)</h3>
-    <p class="staffer-meta">Webpage: <a href="https://pochihkuo.github.io/">https://pochihkuo.github.io/</a></p>
-    <p class="staffer-meta">Email: kuopc [at] cs.nthu.edu.tw</p>
+    <h3 class="staffer-name"><a href="https://pochihkuo.github.io">Po-Chih Kuo (郭柏志)</a></h3>
+    <p class="staffer-meta">Webpage: <a href="https://sites.google.com/site/bfantasykuo/">https://sites.google.com/site/bfantasykuo/</a></p>
+    <p class="staffer-meta">Email: kuopc[at]cs.nthu.edu.tw</p>
     <p class="staffer-meta">Office: Delta 630</p>
     <p class="staffer-meta">Office hours: Wednesdays 11:00–12:00</p>
   </div>
