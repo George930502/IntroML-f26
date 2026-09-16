@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Lab 1
+title: HW1
 parent: Assignments
 nav_order: 1
 ---
 
-# Lab 1: Exploratory Analysis of a Music Catalog
+# Homework 1: Exploratory Analysis of a Music Catalog
 {:.no_toc}
 
 [Handout (PDF)](/IntroML-f26/assets/pdf/HW1.pdf) · [Starter notebook](/IntroML-f26/assets/notebooks/hw1_starter.ipynb)
