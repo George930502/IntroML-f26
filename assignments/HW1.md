@@ -46,7 +46,7 @@ A later assignment will build on the groundwork established here. For Homework 1
 
 1. This is an individual assignment. You may discuss course concepts and general approaches with classmates, but the analysis you perform, the code you submit, and the writing in your report must be your own. Do not copy another student's code, results, figures, or written explanations. **Any submission found to contain plagiarism or copied work will receive a score of zero for the assignment.**
 2. **AI tools**, including coding assistants and coding agents, are **permitted**. If you use them, you are still responsible for understanding, checking, and being able to explain or modify everything you submit. You must also submit the AI-use log described in [Section 7](#section-7-ai-use-log).
-3. **Write the report yourself.** Do not use AI tools to generate the text of your report. We want to read your own reasoning in your own words. Plain language is fine: a short, clear explanation of what you did and why is worth more than a polished paragraph you cannot defend at the demo. Reports that read as AI-generated will be checked at the demo, and you will be asked to explain each conclusion.
+3. **Write the report yourself.** Do not use AI tools to generate the content of your report. We want to read your own reasoning in your own words. Plain language is fine: a short, clear explanation of what you did and why is worth more than a polished paragraph you cannot defend at the demo. Reports that read as AI-generated will be checked at the demo, and you will be asked to explain each conclusion.
 4. The report may be written in **either Traditional Chinese or English**. There are no specific requirements for the report format.
 5. Google Colab is sufficient for this assignment to be accomplished, no GPU is required. You may use standard Python packages including `pandas`, `numpy`, `scipy`, `matplotlib`, and `scikit-learn`. There are **no restrictions on the Python libraries** you may use.
 6. **Submit your work on eeclass**. The pre-registration report mentioned in [Section 2](#section-2-pre-registration) is submitted separately and has an earlier deadline. **No late submission will be accepted.** The main submission consists of:
@@ -75,10 +75,10 @@ The dataset contains the following columns:
 | Columns | Type | Description |
 |:--|:--|:--|
 | `track_id`, `artists`, `album_name`, `track_name` | String | Track identifiers and metadata |
-| `track_genre` | String | The genre category associated with the track. |
-| `popularity` | Integer | A popularity score provided by the streaming platform |
+| `track_genre` | String | The genre category associated with the track |
+| `popularity` | Integer | A popularity score provided by the streaming platform (0~100) |
 | `duration_ms` | Integer | Track duration in milliseconds |
-| `explicit` | boolean | Indicator for explicit lyrics |
+| `explicit` | Boolean | Indicator for explicit lyrics |
 | `danceability`, `energy`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence` | Float | Audio features automatically extracted from the track's audio |
 | `loudness` | Float | Estimated loudness of the track |
 | `tempo` | Float | Estimated tempo in BPM |
@@ -96,10 +96,10 @@ You may read the column descriptions in [Section 1](#section-1-the-data) and ins
 
 In at most two pages, provide the following inside the report:
 
-1. (2%) **Three testable expectations** about the dataset. For each expectation, state:
+1. (2%) **Two testable expectations** about the dataset. For each expectation, state:
    1. What you expect to observe?
    2. What result would show that your expectation was not supported by the data?
-2. (1%) **Two data-quality problems you think might be in the dataset.** Base your guesses only on the information available at this stage. They do not need to be correct.
+2. (1%) **One data-quality problem you think might be in the dataset.** Base your guesses only on the information available at this stage. They do not need to be correct.
 3. (1%) **Predicted held-out error for two regression tasks.** Before fitting any model, predict the held-out root-mean-square error (RMSE) you expect for each task. Report each prediction in the same units as the target and give one sentence explaining your reasoning. Later in Section 6, you will use the available features to predict:
    1. A track's `energy`
    2. A track's `popularity`.
@@ -129,11 +129,13 @@ If you identify a problem but decide not to change the data because of it, expla
 
 Simply listing unusual values or potential problems is not sufficient. Your findings should connect **evidence, impact, and a justified decision**.
 
+Use the cleaned dataset for Sections 4 to 6, and state any place where you deliberately use the raw data instead.
+
 ## Section 4: The Geometry of the Feature Space (10%)
 
 The numeric audio features place each track at a point in a multidimensional feature space. In this section, use **principal component analysis (PCA)** to understand the main directions in which the tracks vary, how many of those directions are important, and how feature scaling affects the result:
 
-1. (3%) **Effective dimensionality.** Use PCA to estimate how many principal components are needed to represent most of the variation in the audio features. Clearly state the criterion you use to decide how many components are sufficient, and provide evidence for your choice.
+1. (3%) **Effective dimensionality.** Use PCA to estimate how many principal components are needed to represent most of the variation in the audio features. Clearly state the criterion or metrics you use to decide how many components are sufficient.
 2. (2%) **Interpret the leading principal components.** For the first few principal components, explain in plain language what kind of variation each component appears to capture.
 3. (4%) **Effect of standardization.** Repeat the PCA without standardizing the features first. Compare the result with the standardized PCA and explain why they differ. Your explanation should refer to the quantity that PCA maximizes. Support your explanation with either:
    1. A short mathematical derivation.
@@ -146,15 +148,13 @@ The goal of this section is to investigate whether tracks with similar audio fea
 
 You will examine this question at two levels: **genres** and **individual tracks**:
 
-1. (4%) **Clustering genres.** Create one representative audio-feature profile for each genre, and use hierarchical clustering to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data.
-
-   Compare either:
+1. (4%) **Clustering genres.** Create one representative audio-feature profile for each genre, and use hierarchical clustering to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data. Compare either:
    1. Two different measures of dissimilarity.
    2. Two different linkage methods.
-2. (3%) **Clustering individual tracks.** Cluster tracks using their audio features. Choose the number of clusters using at least two quantitative criteria, and explain what each resulting cluster represents in terms of its audio characteristics. Some clustering methods may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
-3. (3%) **Are the clusters meaningful?** Provide evidence for whether the clusters you found reflect meaningful structure in the audio features, rather than simply reflecting how the dataset was collected or labeled.
-
-Comparing the clusters with the provided genre labels is one possible source of evidence, but you may use other evidence as well.
+2. (3%) **Clustering individual tracks.** Using the standardized audio features, cluster the individual tracks (for example, with k-means). To choose the number of clusters k, compute at least two quantitative criteria (such as the elbow of the inertia curve and the silhouette score) over a range of k, show them, and explain your final choice. Then describe what each resulting cluster represents in terms of its audio characteristics (for example, by reporting the mean of each feature per cluster). Some clustering methods or criteria may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
+3. (3%) **Are the clusters meaningful?** A clustering algorithm always returns k clusters, even on data with no real structure. Provide evidence that the clusters you found in Question 2 reflect real differences between tracks, rather than being an artifact of the algorithm, the sampling, or the way genres were assigned. Provide at least two evidence. For example:
+   1. Plot the clusters in the space of the first two principal components and explain whether the cluster boundaries align with the directions of variation you interpreted there.
+   2. **Stability.** Re-run the clustering with a different random seed, a different subsample, or after applying your cleaning decisions from Section 3, and report how much the cluster assignments change.
 
 ## Section 6: Two Regression Targets (13%)
 
@@ -166,10 +166,10 @@ Use a **held-out test set** to evaluate predictive performance. Unless otherwise
 
 1. (3%) **Compare your predictions with the actual results.** Restate the RMSE values you predicted in [Section 2](#section-2-pre-registration). Then fit a **linear regression model** for each target and report its **held-out RMSE**. For each target, also report the RMSE of a simple baseline model that ignores the input features and always predicts the mean target value from the training set.
 2. (3%) **Explain the difference in predictive performance**. Compare the two regression tasks and explain why one target is easier or harder to predict from the available features. Support your explanation with evidence from this dataset, such as relationships between the target and the input features, rather than only making a general statement such as "the data are noisy."
-3. (3%) **Look for additional predictive information.** If one target is difficult to predict from the audio features, look for **one other variable in the dataset that may contain useful information about that target**. Support your choice with an appropriate measurement or plot, and explain what the relationship suggests.
-4. (4%) **Study the effect of regularization.** Identify several input features that are strongly correlated with one another. Fit a **regularized linear regression model** using these features, and **vary the regularization strength** over several orders of magnitude. Report how the coefficients and held-out RMSE change as regularization becomes stronger.
+3. (3%) **Look for additional predictive information.** If one target is difficult to predict from the audio features, look for **one other variable in the dataset that may contain useful information about that target**. For example, pick one non-audio column in `tracks.csv` that you think carries information about the target. Support your choice with an appropriate measurement or plot.
+4. (4%) **Study the effect of regularization.** Use `energy` as the target for this question. Identify several input features that are strongly correlated with one another. Standardize these features, then fit a **regularized linear regression model** using these features, and **vary the regularization strength** over several orders of magnitude. Report how the coefficients and held-out RMSE change as regularization becomes stronger.
 
-   If regularization does not improve held-out performance on the full dataset, say so. Then **create a setting in which regularization has a clearer effect,** for example by using a smaller training set, a richer set of basis functions, or both.
+   If regularization does not improve held-out performance on the full dataset, say so. Then **create a setting in which regularization has a clearer effect,** for example by using a smaller training set, a richer set of basis functions (such as polynomial features), or both.
 
 ## Section 7: AI-Use Log
 
@@ -203,3 +203,5 @@ To prevent grader bias, each section is assigned to a dedicated TA who evaluates
 **Demo (50%)**
 
 The demo will take place on **Tuesday, November 10, in the evening**, together with the HW2 demo. Further details, including the exact time, location, and demo format, will be announced later.
+
+Feel free to ask questions! For homework-related issues, please post on the eeclass discussion forum, and the TAs will reply promptly. For personal matters or private inquiries, you can reach the TA at <george930502@gapp.nthu.edu.tw>.
