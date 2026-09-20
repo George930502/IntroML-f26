@@ -22,7 +22,7 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 <tr><td rowspan="2">3</td><td>09/22 (Tue)</td><td>Dimensionality reduction</td><td></td><td></td></tr>
 <tr><td>09/24 (Thu)</td><td>TA Lecture: Introduction to Coding CLI</td><td></td><td><a href="assignments/HW1">HW1</a> release</td></tr>
 <tr><td rowspan="2">4</td><td>09/29 (Tue)</td><td>Dimensionality reduction, Clustering</td><td></td><td></td></tr>
-<tr><td>10/01 (Thu)</td><td>Clustering</td><td></td><td><a href="project">Project</a> release</td></tr>
+<tr><td>10/01 (Thu)</td><td>Clustering</td><td></td><td><a href="project">Project</a> release; HW1 pre-registration due 09/30</td></tr>
 <tr class="exam"><td rowspan="2">5</td><td>10/06 (Tue)</td><td>Midterm 1</td><td></td><td></td></tr>
 <tr><td>10/08 (Thu)</td><td>Bayesian classifiers</td><td></td><td>HW1 due</td></tr>
 <tr><td rowspan="2">6</td><td>10/13 (Tue)</td><td>Bayesian classifiers, Decision trees</td><td></td><td><a href="assignments/HW2">HW2</a> release</td></tr>
