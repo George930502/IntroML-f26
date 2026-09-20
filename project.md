@@ -16,7 +16,7 @@ description: Term project guidelines.
 
 ---
 
-## 1. Overview
+## Overview
 
 The term project accounts for 25% of your grade. Teams will either explore a novel aspect of machine learning or apply machine-learning techniques to a problem of their choice, culminating in a written report and presentations.
 
@@ -24,7 +24,7 @@ The term project accounts for 25% of your grade. Teams will either explore a nov
 - Individual grading: your grade will reflect your individual contribution to the project.
 - Evaluations will be conducted by peers, TAs, and professor(s), potentially by a committee outside CS.
 
-## 2. Tracks
+## Tracks
 
 Choose one of the following tracks.
 
@@ -40,7 +40,7 @@ Select an existing AI model or system and identify its limitations or flaws. Ana
 
 Team up with students from the Department of Early Childhood Education (KEE 100300). Brainstorm together and tackle real-world problems.
 
-## 3. Proposal
+## Proposal
 
 Hand in a proposal and give a 3-minute presentation in class on 11/03. The proposal should describe
 
@@ -52,7 +52,7 @@ Hand in a proposal and give a 3-minute presentation in class on 11/03. The propo
 
 Detailed format requirements will be announced on eeclass when the project is released.
 
-## 4. Final presentation
+## Final presentation
 
 Each group has 6 minutes to present their work during the final presentation sessions (12/17, 12/22, 12/24). Time limits will be strictly enforced; please rehearse. Your presentation should cover
 
@@ -63,14 +63,14 @@ Each group has 6 minutes to present their work during the final presentation ses
 - Contributions of each member
 - Conclusion and takeaways
 
-## 5. Final report and code
+## Final report and code
 
 - Submit a final report.
 - Upload your code to a repository and include the link in your report.
 
 Detailed format requirements will be announced on eeclass.
 
-## 6. Important dates
+## Important dates
 
 | Date                                  | Event                                            |
 | :------------------------------------ | :----------------------------------------------- |
