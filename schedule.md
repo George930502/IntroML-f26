@@ -16,7 +16,7 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 </thead>
 <tbody>
 <tr><td rowspan="2">1</td><td>09/08 (Tue)</td><td>Course overview and logistics</td><td><a href="https://github.com/George930502/IntroML-f26/releases/download/slides/L0.pdf">L0</a></td><td></td></tr>
-<tr><td>09/10 (Thu)</td><td>Introduction to machine learning</td><td><a href="https://github.com/George930502/IntroML-f26/releases/download/slides/L1-Introduction_.pdf">L1</a></td><td></td></tr>
+<tr><td>09/10 (Thu)</td><td>Introduction to machine learning</td><td><a href="https://github.com/George930502/IntroML-f26/releases/download/slides/L1-Introduction.pdf">L1</a></td><td></td></tr>
 <tr><td rowspan="2">2</td><td>09/15 (Tue)</td><td>Regression</td><td><a href="https://github.com/George930502/IntroML-f26/releases/download/slides/L2-Regression.pdf">L2</a></td><td></td></tr>
 <tr><td>09/17 (Thu)</td><td>Regression</td><td><a href="https://github.com/George930502/IntroML-f26/releases/download/slides/L2-Regression.pdf">L2</a></td><td></td></tr>
 <tr><td rowspan="2">3</td><td>09/22 (Tue)</td><td>Dimensionality reduction</td><td></td><td></td></tr>
