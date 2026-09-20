@@ -1,9 +1,9 @@
-title: IntroML-f26
+title: I2ML-2026
 tagline: Introduction to Machine Learning, Fall 2026 @ NTHU
 description: Fall 2026 @ NTHU with Prof. Po-Chih Kuo
 author: HMI Lab, NTHU
-baseurl: "/IntroML-f26"
-url: "https://george930502.github.io"
+baseurl: "/I2ML-2026"
+url: "https://nthu-cs-hmilab.github.io"
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
 # Theme settings

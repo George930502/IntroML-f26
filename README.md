@@ -1,4 +1,4 @@
-# IntroML-f26
+# I2ML-2026
 
 Course website for Introduction to Machine Learning (CS 460200), Fall 2026, NTHU.
 

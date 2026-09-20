@@ -8,12 +8,12 @@ nav_order: 1
 # Homework 1: Exploratory Analysis of a Music Catalog
 {:.no_toc}
 
-[Handout (PDF)](/IntroML-f26/assets/pdf/HW1.pdf) · [Starter notebook](/IntroML-f26/assets/notebooks/hw1_starter.ipynb)
+[Handout (PDF)](/I2ML-2026/assets/pdf/HW1.pdf) · [Starter notebook](/I2ML-2026/assets/notebooks/hw1_starter.ipynb) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
 
-| | |
-|:--|:--|
-| Pre-Registration Report Submission Deadline | **9/30 11:59 PM** |
-| Final Report and Code Submission Deadline | **10/8 11:59 PM** |
+<table>
+<tr><td>Pre-Registration Report Submission Deadline</td><td><strong>9/30 11:59 PM</strong></td></tr>
+<tr><td>Final Report and Code Submission Deadline</td><td><strong>10/8 11:59 PM</strong></td></tr>
+</table>
 
 ## Table of contents
 {: .no_toc .text-delta }
