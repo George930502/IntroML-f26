@@ -40,7 +40,7 @@ There will be little math or proof of theory. Upon successful completion of this
 
 ## eeclass
 
-We use eeclass for all communications: announcements and questions related to lectures, labs, and the project. You should be added to the eeclass course automatically. Google Meet will be used for remote lectures if necessary.
+We use eeclass for all communications: announcements and questions related to lectures, homework, and the project. You should be added to the eeclass course automatically. Google Meet will be used for remote lectures if necessary.
 
 ## Prerequisites
 
@@ -66,9 +66,9 @@ See [Project](project) for details.
 Grades will be assigned based on
 
 - 3 exams (35%): Midterm 1 (10/6), Midterm 2 (11/10), and Final Exam (12/15). Written exams, in classroom, closed-book. No electronic devices are permitted.
-- 4 labs (40%): each lab is due 3 weeks after the announcement. Google Colab is recommended. A demo is required for each lab.
+- 4 homework assignments (40%): each homework is due 3 weeks after the announcement. Google Colab is recommended. A demo is required for each homework.
 - Term project (25%): proposal, presentations, final report, and code. See [Project](project).
-- Extra bonus (up to 5%): active engagement in class, such as answering questions on eeclass or identifying major errors in slides or labs, will be rewarded with additional points.
+- Extra bonus (up to 5%): active engagement in class, such as answering questions on eeclass or identifying major errors in slides or homework, will be rewarded with additional points.
 
 These weights are subject to minor variation.
 
@@ -82,4 +82,4 @@ These weights are subject to minor variation.
 
 ## Statements on plagiarism
 
-Cheating or plagiarism on exams or labs will result in a zero score. You are encouraged to discuss course concepts with classmates, but the work you submit must be your own.
+Cheating or plagiarism on exams or homework will result in a zero score. You are encouraged to discuss course concepts with classmates, but the work you submit must be your own.

@@ -23,7 +23,7 @@ Fall 2026 @ NTHU with Prof. Po-Chih Kuo
 <div class="staffer">
   <img class="staffer-image" src="/IntroML-f26/assets/images/staff/pckuo.png" alt="" />
   <div>
-    <h3 class="staffer-name"><a href="https://pochihkuo.github.io">Po-Chih Kuo (郭柏志)</a></h3>
+    <h3 class="staffer-name">Po-Chih Kuo (郭柏志)</h3>
     <p class="staffer-meta">Webpage: <a href="https://sites.google.com/site/bfantasykuo/">https://sites.google.com/site/bfantasykuo/</a></p>
     <p class="staffer-meta">Email: kuopc[at]cs.nthu.edu.tw</p>
     <p class="staffer-meta">Office: Delta 630</p>
@@ -41,12 +41,6 @@ Fall 2026 @ NTHU with Prof. Po-Chih Kuo
 <div class="staffer"><img class="staffer-image" src="/IntroML-f26/assets/images/staff/akchen.jpg" alt="" /><div><h3 class="staffer-name">An-Kai Chen (陳安楷)</h3></div></div>
 
 TA hours: Thursdays 17:00–18:00, EECS 639. Please make a reservation via the Google form (posted on eeclass) by Thursday 10:00.
-
-Notice
-{: .label .label-red }
-
-Please use eeclass for all course communication: announcements, and questions about lectures, labs, and the project. Do not email individual staff members directly.
-{: .btn .btn-outline .fs-5 }
 
 ## Overview
 
