@@ -8,7 +8,7 @@ nav_order: 1
 # Homework 1: Exploratory Analysis of a Music Catalog
 {:.no_toc}
 
-[Handout (PDF)](/I2ML-2026/assets/pdf/HW1.pdf) · [Starter notebook](/I2ML-2026/assets/notebooks/hw1_starter.ipynb) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
+[Handout (PDF)]({{ '/assets/pdf/HW1.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw1_starter.ipynb' | relative_url }}) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
 
 <table>
 <tr><td>Pre-Registration Report Submission Deadline</td><td><strong>9/30 11:59 PM</strong></td></tr>
