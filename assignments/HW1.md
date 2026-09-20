@@ -8,7 +8,7 @@ nav_order: 1
 # Homework 1: Exploratory Analysis of a Music Catalog
 {:.no_toc}
 
-[Handout (PDF)](/IntroML-f26/assets/pdf/HW1.pdf)
+[Handout (PDF)](/IntroML-f26/assets/pdf/HW1.pdf) · [Starter notebook](/IntroML-f26/assets/notebooks/hw1_starter.ipynb)
 
 | | |
 |:--|:--|
@@ -45,7 +45,7 @@ A later assignment will build on the groundwork established here. For Homework 1
 ## Rules
 
 1. This is an individual assignment. You may discuss course concepts and general approaches with classmates, but the analysis you perform, the code you submit, and the writing in your report must be your own. Do not copy another student's code, results, figures, or written explanations. **Any submission found to contain plagiarism or copied work will receive a score of zero for the assignment.**
-2. **AI tools**, including coding assistants and coding agents, are **permitted**. If you use them, you are still responsible for understanding, checking, and being able to explain or modify everything you submit. You must also submit the AI-use log described in Section 8.
+2. **AI tools**, including coding assistants and coding agents, are **permitted**. If you use them, you are still responsible for understanding, checking, and being able to explain or modify everything you submit. You must also submit the AI-use log described in [Section 7](#section-7-ai-use-log).
 3. **Submit your work on eeclass**. The pre-registration report mentioned in [Section 2](#section-2-pre-registration) is submitted separately and has an earlier deadline. **No late submission will be accepted.** The main submission consists of:
 
    | Submission | Deadline |
@@ -57,6 +57,10 @@ A later assignment will build on the groundwork established here. For Homework 1
 
 4. The report may be written in **either Traditional Chinese or English**. There are no specific requirements for the report format.
 5. Google Colab is sufficient for this assignment to be accomplished, no GPU is required. You may use standard Python packages including `pandas`, `numpy`, `scipy`, `matplotlib`, and `scikit-learn`. There are **no restrictions on the Python libraries** you may use.
+
+## Materials
+
+The starter notebook (`hw1_starter.ipynb`) and raw dataset (`tracks.csv`) for Homework 1 have been posted on eeclass. Please head over to the platform for full details and instructions.
 
 ## Section 1: The Data
 
@@ -115,7 +119,7 @@ Your task in this section is to **identify** the most important **data-quality**
    3. **Your decision**: state what you will do about it.
    4. **Trade-off:** explain what information, data, or reliability you may lose because of that decision.
 2. **Justify your ranking.** Explain why you ranked your first finding as more important than your second.
-3. **Apply your cleaning decisions.** In your submitted notebook, include the code that transforms the raw dataset into the cleaned dataset used in the your analysis. The code should be reproducible from the original `tracks.csv` dataset.
+3. **Apply your cleaning decisions.** In your submitted notebook, include the code that transforms the raw dataset into the cleaned dataset used in your analysis. The code should be reproducible from the original `tracks.csv` dataset.
 
 If you identify a problem but decide not to change the data because of it, explain that decision in your report and treat the issue as a limitation.
 
@@ -163,7 +167,7 @@ Use a **held-out test set** to evaluate predictive performance. Unless otherwise
 
    If regularization does not improve held-out performance on the full dataset, say so. Then **create a setting in which regularization has a clearer effect,** for example by using a smaller training set, a richer set of basis functions, or both.
 
-## AI-Use Log
+## Section 7: AI-Use Log
 
 AI tools are permitted in this assignment. The purpose of this log is to document how you used them and how you verified their outputs.
 
