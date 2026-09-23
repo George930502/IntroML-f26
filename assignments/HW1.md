@@ -6,28 +6,19 @@ nav_order: 1
 ---
 
 # Homework 1: Exploratory Analysis of a Music Catalog
-{:.no_toc}
 
-[Handout (PDF)]({{ '/assets/pdf/HW1.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw1_starter.ipynb' | relative_url }}) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
+<span class="text-red-300">*Pre-Registration Report Submission Deadline*: **9/30 11:59 PM**</span>  
+<span class="text-red-300">*Final Report and Code Submission Deadline*: **10/8 11:59 PM**</span>
+{: .text-center }
 
-<table>
-<tr><td>Pre-Registration Report Submission Deadline</td><td><strong>9/30 11:59 PM</strong></td></tr>
-<tr><td>Final Report and Code Submission Deadline</td><td><strong>10/8 11:59 PM</strong></td></tr>
-</table>
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
+[Handout (PDF)]({{ '/assets/pdf/HW1.pdf' | relative_url }})
+{: .text-center }
 
 ## Introduction
 
 You are given a music catalog containing **114,000 track records**. In this assignment, you will treat this catalog as a dataset and investigate its quality, structure, and predictive value.
 
-Suppose a team ultimately wants to use this dataset to build machine-learning systems for tasks such as **genre tagging** and **predicting track popularity**. Before deciding what models to build, however, the team first needs to understand the dataset itself:
+Suppose a team ultimately wants to use this dataset to build machine-learning systems for tasks such as genre tagging and **predicting track popularity**. Before deciding what models to build, however, the team first needs to understand the dataset itself:
 
 - Is the dataset reliable enough to use as training data?
 - What structure is present in the audio-feature space?
@@ -38,25 +29,26 @@ Your goal in this assignment is to answer these questions with evidence.
 
 You will first audit the dataset for data-quality problems and make explicit decisions about how those problems should be handled. You will then use **principal component analysis** to study the geometry of the audio-feature space, use **clustering methods** to investigate structure among genres and individual tracks, and **fit regression models** for two prediction targets and compare their predictive performance. Finally, you will summarize what your results imply about the **strengths and limitations** of this dataset for machine-learning applications.
 
-The purpose of the assignment is **not to obtain the highest possible predictive accuracy**. Instead, you are expected to connect each conclusion to appropriate evidence, **explain the reasoning behind your analysis choices, and recognize when the data do not support a strong conclusion**. A weak or unsuccessful predictive result can therefore be a correct and important finding if you demonstrate it carefully and explain what it means.
+The purpose of the assignment is **not to obtain the highest possible predictive accuracy**. Instead, you are expected to connect each conclusion to appropriate evidence, <span class="text-red-300">**explain the reasoning behind your analysis choices, and recognize when the data do not support a strong conclusion**</span>**.** A weak or unsuccessful predictive result can therefore be a correct and important finding if you demonstrate it carefully and explain what it means.
 
 A later assignment will build on the groundwork established here. For Homework 1, all empirical analyses must use only the variables provided in this catalog. **Do not add external datasets, external features, or information collected from other sources.** Your conclusions should be supported by evidence from your analysis of this dataset.
 
 ## Rules
 
-1. This is an individual assignment. You may discuss course concepts and general approaches with classmates, but the analysis you perform, the code you submit, and the writing in your report must be your own. Do not copy another student's code, results, figures, or written explanations. **Any submission found to contain plagiarism or copied work will receive a score of zero for the assignment.**
-2. **AI tools**, including coding assistants and coding agents, are **permitted**. If you use them, you are still responsible for understanding, checking, and being able to explain or modify everything you submit. You must also submit the AI-use log described in [Section 7](#section-7-ai-use-log).
-3. **Write the report yourself.** Do not use AI tools to generate the content of your report. We want to read your own reasoning in your own words. Plain language is fine: a short, clear explanation of what you did and why is worth more than a polished paragraph you cannot defend at the demo. Reports that read as AI-generated will be checked at the demo, and you will be asked to explain each conclusion.
+1. This is an individual assignment. You may discuss course concepts and general approaches with classmates, but the analysis you perform, the code you submit, and the writing in your report must be your own. Do not copy another student's code, results, figures, or written explanations. **Any submission found to contain plagiarism or copied work will receive a score of <span class="text-red-300">zero</span> for the assignment.**
+2. **AI tools**, including coding assistants and coding agents, are <span class="text-red-300">**permitted**</span>. If you use them, you are still responsible for understanding, checking, and being able to explain or modify everything you submit. You must also submit the AI-use log described in [Section 7](#section-7-ai-use-log).
+3. **Write the report yourself.** Do not use AI tools to generate the content of your report. We want to read your own reasoning in your own words. Plain language is fine: a short, clear explanation of what you did and why is worth more than a polished paragraph you cannot defend at the demo. <span class="text-red-300">Reports that read as AI-generated will be checked at the demo, and you will be asked to explain each conclusion.</span>
 4. The report may be written in **either Traditional Chinese or English**. There are no specific requirements for the report format.
 5. Google Colab is sufficient for this assignment to be accomplished, no GPU is required. You may use standard Python packages including `pandas`, `numpy`, `scipy`, `matplotlib`, and `scikit-learn`. There are **no restrictions on the Python libraries** you may use.
-6. **Submit your work on eeclass**. The pre-registration report mentioned in [Section 2](#section-2-pre-registration) is submitted separately and has an earlier deadline. **No late submission will be accepted.** The main submission consists of:
+6. **Submit your work on eeclass**. The pre-registration report mentioned in [Section 2](#section-2-pre-registration-5) is submitted separately and has an earlier deadline. <span class="text-red-300">No late submission will be accepted.</span> The main submission consists of:
 
-   | Submission | Deadline |
-   |:--|:--|
-   | A **pre-registration report** in the PDF format, up to **2 pages.** File name: `HW1_pre_report_{student_id}.pdf` | 9/30 11:59 PM |
-   | A **final report** in the PDF format, up to **10 pages.** File name: `HW1_final_report_{student_id}.pdf` | 10/8 11:59 PM |
-   | An **.ipynb notebook** containing all code needed to reproduce the results reported in your submission. File name: `HW1_code_{student_id}.ipynb` | 10/8 11:59 PM |
-   | The **AI-use log** document. File name: `HW1_ai_use_{student_id}.md` | 10/8 11:59 PM |
+   <table>
+   <tr><th>Submission</th><th>Deadline</th></tr>
+   <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW1_pre_report_{student_id}.pdf</span></td><td>9/30 11:59 PM</td></tr>
+   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>10 pages.</strong> File name: <span class="text-red-300">HW1_final_report_{student_id}.pdf</span></td><td rowspan="3">10/8 11:59 PM</td></tr>
+   <tr><td>An <strong>.ipynb notebook</strong> containing all code needed to reproduce the results reported in your submission. File name: <span class="text-red-300">HW1_code_{student_id}.ipynb</span></td></tr>
+   <tr><td>The <strong>AI-use log</strong> document. File name: <span class="text-red-300">HW1_ai_use_{student_id}.md</span></td></tr>
+   </table>
 
 ## Materials
 
@@ -73,7 +65,7 @@ The file `tracks.csv` contains 114,000 rows and 20 columns. Each row represents 
 The dataset contains the following columns:
 
 | Columns | Type | Description |
-|:--|:--|:--|
+|:--:|:--:|:--:|
 | `track_id`, `artists`, `album_name`, `track_name` | String | Track identifiers and metadata |
 | `track_genre` | String | The genre category associated with the track |
 | `popularity` | Integer | A popularity score provided by the streaming platform (0~100) |
@@ -88,56 +80,56 @@ Do not assume that every field was measured correctly. Part of your task is to e
 
 ## Section 2: Pre-Registration (5%)
 
-Submit this section report **before 9/30 11:59 PM**.
+<span class="text-red-300">Submit this section report **before 9/30 11:59 PM.**</span>
 
-The purpose of this task is to make your expectations explicit before you analyze the full dataset. Later, you will compare these expectations with your actual results and reflect on which expectations were supported, which were not, and what evidence changed your mind.
+The purpose of this task is to <span class="text-red-300">make your expectations explicit before you analyze the full dataset</span>. Later, you will compare these expectations with your actual results and reflect on which expectations were supported, which were not, and what evidence changed your mind.
 
 You may read the column descriptions in [Section 1](#section-1-the-data) and inspect some rows of `tracks.csv`. **Do not compute summary statistics, create plots, search the full dataset, or fit any models before submitting this section.**
 
 In at most two pages, provide the following inside the report:
 
-1. (2%) **Two testable expectations** about the dataset. For each expectation, state:
+1. **(2%) Two testable expectations** about the dataset. For each expectation, state:
    1. What you expect to observe?
    2. What result would show that your expectation was not supported by the data?
-2. (1%) **One data-quality problem you think might be in the dataset.** Base your guesses only on the information available at this stage. They do not need to be correct.
-3. (1%) **Predicted held-out error for two regression tasks.** Before fitting any model, predict the held-out root-mean-square error (RMSE) you expect for each task. Report each prediction in the same units as the target and give one sentence explaining your reasoning. Later in Section 6, you will use the available features to predict:
+2. **(1%) One data-quality problem you think might be in the dataset.** Base your guesses only on the information available at this stage. They do not need to be correct.
+3. **(1%) Predicted held-out error for two regression tasks.** Before fitting any model, predict the held-out root-mean-square error (RMSE) you expect for each task. Report each prediction in the same units as the target and give one sentence explaining your reasoning. Later in Section 6, you will use the available features to predict:
    1. A track's `energy`
    2. A track's `popularity`.
-4. (1%) **One question about the dataset, labels, or data-collection process** that you would want answered before relying on a model trained on it.
+4. **(1%) One question about the dataset, labels, or data-collection process** that you would want answered before relying on a model trained on it.
 
 Your pre-registration is graded on **completeness and specificity**, not on whether your predictions are correct. You will compare these expectations with your actual findings later in the assignment and discuss in the report.
 
-- Submitted by September 30: Up to 5 points.
-- Submitted between October 1 and October 8: Up to 2 points.
-- Not submitted: Section 2 receives 0 points, and Question 1 in Section 6 cannot receive credit since there is no prediction to restate.
+- Submitted by *September 30*: Up to **5** points.
+- Submitted between *October 1 and October 8*: Up to **2** points.
+- Not submitted: Section 2 receives **0** points, and [Question 1 in Section 6](#section-6-two-regression-targets-13) cannot receive credit since there is no prediction to restate.
 
 ## Section 3: Auditing the Dataset (12%)
 
 Real-world datasets often contain problems that can affect a machine-learning analysis, for example, missing or invalid values, repeated records, inconsistent entries, or variables whose meaning is easy to misinterpret.
 
-Your task in this section is to **identify** the most important **data-quality** problems in `tracks.csv`, explain why they matter, and decide how you will handle them before continuing with the rest of the assignment.
+Your task in this section is to **identify** the most important **data-quality problems** in `tracks.csv`, <span class="text-red-300">explain why they matter, and decide how you will handle them</span> before continuing with the rest of the assignment.
 
-1. (8%) Identify and prioritize **at least four data-quality findings**, ordered from most to least important based on how strongly you believe each one could affect the analyses or models in this assignment. For each finding, include:
+1. **(8%)** Identify and prioritize **at least four data-quality findings**, ordered from most to least important based on how strongly you believe each one could affect the analyses or models in this assignment. For each finding, include:
    1. **Evidence**: one number, table, or figure showing that the issue is present.
    2. **Why it matters**: explain how the issue could affect a later analysis or model.
    3. **Your decision**: state what you will do about it.
    4. **Trade-off:** explain what information, data, or reliability you may lose because of that decision.
-2. (2%) **Justify your ranking.** Explain why you ranked your first finding as more important than your second.
-3. (2%) **Apply your cleaning decisions.** In your submitted notebook, include the code that transforms the raw dataset into the cleaned dataset used in your analysis. The code should be reproducible from the original `tracks.csv` dataset.
+2. **(2%) Justify your ranking.** Explain why you ranked your first finding as more important than your second.
+3. **(2%) Apply your cleaning decisions.** In your submitted notebook, include the code that transforms the raw dataset into the cleaned dataset used in your analysis. The code should be reproducible from the original `tracks.csv` dataset.
 
 If you identify a problem but decide not to change the data because of it, explain that decision in your report and treat the issue as a limitation.
 
 Simply listing unusual values or potential problems is not sufficient. Your findings should connect **evidence, impact, and a justified decision**.
 
-Use the cleaned dataset for Sections 4 to 6, and state any place where you deliberately use the raw data instead.
+**Use the cleaned dataset for Sections 4 to 6**, and state any place where you deliberately use the raw data instead.
 
 ## Section 4: The Geometry of the Feature Space (10%)
 
 The numeric audio features place each track at a point in a multidimensional feature space. In this section, use **principal component analysis (PCA)** to understand the main directions in which the tracks vary, how many of those directions are important, and how feature scaling affects the result:
 
-1. (3%) **Effective dimensionality.** Use PCA to estimate how many principal components are needed to represent most of the variation in the audio features. Clearly state the criterion or metrics you use to decide how many components are sufficient.
-2. (2%) **Interpret the leading principal components.** For the first few principal components, explain in plain language what kind of variation each component appears to capture.
-3. (5%) **Effect of standardization.** Repeat the PCA without standardizing the features first. Compare the result with the standardized PCA and explain why they differ. Your explanation should refer to the quantity that PCA maximizes. Support your explanation with either:
+1. **(3%) Effective dimensionality.** Use PCA to estimate how many principal components are needed to represent most of the variation in the **audio features**. Clearly state the **criterion or metrics** you use to decide how many components are sufficient.
+2. **(2%) Interpret the leading principal components.** For the first few principal components, explain in plain language what kind of variation each component appears to capture.
+3. **(5%) Effect of standardization.** Repeat the PCA without standardizing the features first. Compare the result with the standardized PCA and explain why they differ. Your explanation should refer to the quantity that PCA maximizes. Support your explanation with either:
    1. A short mathematical derivation.
    2. A variance calculation using your own data.
 
@@ -147,13 +139,13 @@ The goal of this section is to investigate whether tracks with similar audio fea
 
 You will examine this question at two levels: **genres** and **individual tracks**:
 
-1. (4%) **Clustering genres.** Create one representative audio-feature profile for each genre, and use hierarchical clustering to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data. Compare:
+1. **(4%) Clustering genres.** Create one representative audio-feature profile for each genre, and use **hierarchical clustering** to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data. Compare:
    1. Two different measures of dissimilarity.
    2. Two different linkage methods.
-2. (3%) **Clustering individual tracks.** Using the standardized audio features, cluster the individual tracks (e.g. with k-means). To choose the number of clusters k, compute at least two quantitative criteria (e.g. the elbow of the inertia curve and the silhouette score) over a range of k, show them, and explain your final choice. Then describe what each resulting cluster represents in terms of its audio characteristics (e.g. by reporting the mean of each feature per cluster). Some clustering methods or criteria may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
-3. (3%) **Are the clusters meaningful?** A clustering algorithm always returns k clusters, even on data with no real structure. Provide evidence that the clusters you found in Question 2 reflect real differences between tracks, rather than being an artifact of the algorithm, the sampling, or the way genres were assigned. Provide at least two evidence. For example:
-   1. Plot the clusters in the space of the first two principal components and explain whether the cluster boundaries align with the directions of variation you interpreted there.
-   2. **Stability.** Re-run the clustering with a different random seed, a different subsample, or after applying your cleaning decisions from Section 3, and report how much the cluster assignments change.
+2. **(3%) Clustering individual tracks.** Using the standardized audio features, cluster the individual tracks (e.g. with **k-means**). To choose the number of clusters k, compute at least two quantitative criteria (e.g. the **elbow of the inertia curve and the silhouette score**) over a range of k, show them, and explain your final choice. Then describe what each resulting cluster represents in terms of its audio characteristics (e.g. by reporting **the mean of each feature per cluster**). Some clustering methods or criteria may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
+3. **(3%) Are the clusters meaningful?** A clustering algorithm always returns k clusters, even on data with no real structure. Provide evidence that the clusters you found in *Question 2* reflect real differences between tracks, rather than being an artifact of the algorithm, the sampling, or the way genres were assigned. Provide **at least two evidence**. For example:
+   1. **Plot the clusters in the space of the first two principal components** and explain whether the cluster boundaries align with the directions of variation you interpreted there.
+   2. **Stability**. Re-run the clustering with a different random seed, a different subsample, or after applying your cleaning decisions from [Section 3](#section-3-auditing-the-dataset-12), and report how much the cluster assignments change.
 
 ## Section 6: Two Regression Targets (13%)
 
@@ -161,42 +153,50 @@ The goal of this section is to compare how well the available features can predi
 
 You will build regression models for `energy` and `popularity` features.
 
-Use a **held-out test set** to evaluate predictive performance. Unless otherwise stated, use the remaining appropriate features in the dataset as predictors, and do not include the target itself among the input features.
+Use a **held-out test set** to evaluate predictive performance. Unless otherwise stated, use the remaining appropriate features in the dataset as predictors, and **do not include the target itself among the input features.**
 
-**Hint:** Watch out for data leakage during train-test splitting, note that individual tracks may have multiple genre entries and thus span several rows.
+<span class="text-red-300">Hint: Watch out for **data leakage during train-test splitting**, note that individual tracks may have multiple genre entries and thus span several rows.</span>
 
-**Reminder:** For Q1, Q2, and Q4, only these audio features can be used as input features: `danceability`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence`, `loudness`, `tempo`, `key`, `mode`, `time_signature`. Notice that `energy` input feature can be used only in building regression model for `popularity` target. And for Q3, you are allowed to choose other non-audio features as input.
+---
+
+**Reminder:**
+
+For Q1, Q2, and Q4, only these audio features can be used as input features: `danceability`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence`, `loudness`, `tempo`, `key`, `mode`, `time_signature`.
+
+Notice that `energy` input feature can be used only in building regression model for `popularity` target. And for Q3, you are allowed to choose other non-audio features as input.
 
 You must deliver:
 
-1. (3%) **Compare your predictions with the actual results.** Restate the RMSE values you predicted in [Section 2](#section-2-pre-registration). Then fit a **linear regression model** for each target and report its **held-out RMSE**. For each target, also report the RMSE of a simple baseline model that ignores the input features and always predicts the mean target value from the training set.
-2. (3%) **Explain the difference in predictive performance**. Compare the two regression tasks and explain why one target is easier or harder to predict from the available features. Support your explanation with evidence from this dataset, such as relationships between the target and the input features, rather than only making a general statement such as "the data are noisy."
-3. (3%) **Look for additional predictive information.** If one target is difficult to predict from the audio features, look for **one other variable in the dataset that may contain useful information about that target**. For example, pick one non-audio column in `tracks.csv` that you think carries information about the target. Support your choice with an appropriate measurement or plot.
-4. (4%) **Study the effect of regularization.** Use `energy` as the target for this question. Identify several input features that are strongly correlated with one another. Standardize these features, then fit a **regularized linear regression model** using these features, and **vary the regularization strength** over several orders of magnitude. Report how the coefficients and held-out RMSE change as regularization becomes stronger.
+1. **(3%) Compare your predictions with the actual results.** Restate the RMSE values you predicted in [Section 2](#section-2-pre-registration-5). Then fit a **linear regression model** for each target and report its **held-out RMSE**. For each target, also <span class="text-red-300">report the RMSE of a **simple baseline model** that ignores the input features and always predicts the mean target value from the training set.</span>
+2. **(3%) Explain the difference in predictive performance**. Compare the two regression tasks and explain why one target is easier or harder to predict from the available features. Support your explanation with evidence from this dataset, such as relationships between the target and the input features, rather than only making a general statement such as "the data are noisy."
+3. **(3%) Look for additional predictive information.** If one target is difficult to predict from the audio features, look for **one other variable in the dataset that may contain useful information about that target**. For example, pick one non-audio column in `tracks.csv` that you think carries information about the target. Support your choice with an appropriate measurement or plot.
+4. **(4%) Study the effect of regularization.** Use `energy` as the target for this question. Identify several input features that are strongly correlated with one another. Standardize these features, then fit a **regularized linear regression model** using these features, and **vary the regularization strength** over several orders of magnitude. Report how the coefficients and held-out RMSE change as regularization becomes stronger.
 
-   If regularization does not improve held-out performance on the full dataset, say so. Then **create a setting in which regularization has a clearer effect,** for example by using a smaller training set, a richer set of basis functions (such as polynomial features), or both.
+   If regularization does not improve held-out performance on the full dataset, say so. Then **create a setting in which regularization has a clearer effect**, for example by using a smaller training set, a richer set of basis functions (such as polynomial features), or both.
 
 ## Section 7: AI-Use Log
 
-AI tools are permitted in this assignment. The purpose of this log is to document how you used them and how you verified their outputs.
+AI tools are <span class="text-red-300">permitted</span> in this assignment. The purpose of this log is to document how you used them and how you verified their outputs.
 
-Submit an AI-use log written in the markdown file. If you used any AI tool during the assignment, briefly describe:
+<span class="text-red-300">Submit an AI-use log written in the markdown file.</span> If you used any AI tool during the assignment, briefly describe:
 
-1. **What you used AI for.** List the main parts of the assignment for which you used AI, such as writing or debugging code, explaining a concept, suggesting an analysis, interpreting a result, or revising your writing.
-2. **How you checked the output.** For each major use, briefly explain how you verified that the AI-generated output was correct or appropriate. For example, you might compare it with lecture material, inspect the code, run an additional experiment, or check the result against the data.
+1. **What you used AI for.**  
+   List the main parts of the assignment for which you used AI, such as writing or debugging code, explaining a concept, suggesting an analysis, interpreting a result, or revising your writing.
+2. **How you checked the output.**  
+   For each major use, briefly explain how you verified that the AI-generated output was correct or appropriate. For example, you might compare it with lecture material, inspect the code, run an additional experiment, or check the result against the data.
 
 If you did not use any AI tools, simply state that in the log.
 
-You remain responsible for all code, analyses, figures, and explanations in your submission. **You should be able to explain any AI-assisted work during the demo session.**
+You remain responsible for all code, analyses, figures, and explanations in your submission. <span class="text-red-300">**You should be able to explain any AI-assisted work during the demo session.**</span>
 
-A 5-point deduction will be applied for missing submissions or conspicuously low-effort responses (e.g., merely writing "I used ChatGPT").
+A <span class="text-red-300">**5-point deduction**</span> will be applied for **missing submissions or conspicuously low-effort responses** (e.g., merely writing "I used ChatGPT").
 
 ## Grading Policy
 
 **Report (50%)**
 
 | Tier | Description | Percentage |
-|:--:|:--|--:|
+|:--|:--|:--|
 | 4 | Provides evidence, explanation, and decisions, along with a discussion of limitations or alternative interpretations. | 100% |
 | 3 | Provides evidence, explanation, and decisions, with coherent logic linking all three. | 80% |
 | 2 | Presents results or figures, but the explanation is weak or disconnected from the evidence. | 50% |

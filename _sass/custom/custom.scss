@@ -78,3 +78,8 @@ iframe {
     font-weight: normal;
   }
 }
+
+// Nested numbered lists read a., b., ... (HW handouts)
+.main-content ol ol > li::before {
+  content: counter(step-counter, lower-alpha) ".";
+}
