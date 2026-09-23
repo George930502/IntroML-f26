@@ -137,10 +137,9 @@ The numeric audio features place each track at a point in a multidimensional fea
 
 1. (3%) **Effective dimensionality.** Use PCA to estimate how many principal components are needed to represent most of the variation in the audio features. Clearly state the criterion or metrics you use to decide how many components are sufficient.
 2. (2%) **Interpret the leading principal components.** For the first few principal components, explain in plain language what kind of variation each component appears to capture.
-3. (4%) **Effect of standardization.** Repeat the PCA without standardizing the features first. Compare the result with the standardized PCA and explain why they differ. Your explanation should refer to the quantity that PCA maximizes. Support your explanation with either:
+3. (5%) **Effect of standardization.** Repeat the PCA without standardizing the features first. Compare the result with the standardized PCA and explain why they differ. Your explanation should refer to the quantity that PCA maximizes. Support your explanation with either:
    1. A short mathematical derivation.
    2. A variance calculation using your own data.
-4. (1%) **Choose appropriate variables.** Identify which columns in [Section 1](#section-1-the-data) should not be treated as continuous numeric features in this PCA analysis. Briefly explain why, and state how you handled them.
 
 ## Section 5: Structure in the Data (10%)
 
@@ -148,10 +147,10 @@ The goal of this section is to investigate whether tracks with similar audio fea
 
 You will examine this question at two levels: **genres** and **individual tracks**:
 
-1. (4%) **Clustering genres.** Create one representative audio-feature profile for each genre, and use hierarchical clustering to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data. Compare either:
+1. (4%) **Clustering genres.** Create one representative audio-feature profile for each genre, and use hierarchical clustering to group similar genres together. Show how the resulting genre groupings differ, and explain which result you find more reasonable based on evidence from the data. Compare:
    1. Two different measures of dissimilarity.
    2. Two different linkage methods.
-2. (3%) **Clustering individual tracks.** Using the standardized audio features, cluster the individual tracks (for example, with k-means). To choose the number of clusters k, compute at least two quantitative criteria (such as the elbow of the inertia curve and the silhouette score) over a range of k, show them, and explain your final choice. Then describe what each resulting cluster represents in terms of its audio characteristics (for example, by reporting the mean of each feature per cluster). Some clustering methods or criteria may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
+2. (3%) **Clustering individual tracks.** Using the standardized audio features, cluster the individual tracks (e.g. with k-means). To choose the number of clusters k, compute at least two quantitative criteria (e.g. the elbow of the inertia curve and the silhouette score) over a range of k, show them, and explain your final choice. Then describe what each resulting cluster represents in terms of its audio characteristics (e.g. by reporting the mean of each feature per cluster). Some clustering methods or criteria may be expensive to run on all 114,000 rows. If you use a subset of the data for clustering or evaluation, clearly state how the subset was selected and why.
 3. (3%) **Are the clusters meaningful?** A clustering algorithm always returns k clusters, even on data with no real structure. Provide evidence that the clusters you found in Question 2 reflect real differences between tracks, rather than being an artifact of the algorithm, the sampling, or the way genres were assigned. Provide at least two evidence. For example:
    1. Plot the clusters in the space of the first two principal components and explain whether the cluster boundaries align with the directions of variation you interpreted there.
    2. **Stability.** Re-run the clustering with a different random seed, a different subsample, or after applying your cleaning decisions from Section 3, and report how much the cluster assignments change.
@@ -162,7 +161,13 @@ The goal of this section is to compare how well the available features can predi
 
 You will build regression models for `energy` and `popularity` features.
 
-Use a **held-out test set** to evaluate predictive performance. Unless otherwise stated, use the remaining appropriate features in the dataset as predictors, and do not include the target itself among the input features. You must deliver:
+Use a **held-out test set** to evaluate predictive performance. Unless otherwise stated, use the remaining appropriate features in the dataset as predictors, and do not include the target itself among the input features.
+
+**Hint:** Watch out for data leakage during train-test splitting, note that individual tracks may have multiple genre entries and thus span several rows.
+
+**Reminder:** For Q1, Q2, and Q4, only these audio features can be used as input features: `danceability`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence`, `loudness`, `tempo`, `key`, `mode`, `time_signature`. Notice that `energy` input feature can be used only in building regression model for `popularity` target. And for Q3, you are allowed to choose other non-audio features as input.
+
+You must deliver:
 
 1. (3%) **Compare your predictions with the actual results.** Restate the RMSE values you predicted in [Section 2](#section-2-pre-registration). Then fit a **linear regression model** for each target and report its **held-out RMSE**. For each target, also report the RMSE of a simple baseline model that ignores the input features and always predicts the mean target value from the training set.
 2. (3%) **Explain the difference in predictive performance**. Compare the two regression tasks and explain why one target is easier or harder to predict from the available features. Support your explanation with evidence from this dataset, such as relationships between the target and the input features, rather than only making a general statement such as "the data are noisy."
