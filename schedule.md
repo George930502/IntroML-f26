@@ -19,8 +19,8 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 <tr><td>09/10 (Thu)</td><td>Introduction to machine learning</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L1-Introduction.pdf">L1</a></td><td></td></tr>
 <tr><td rowspan="2">2</td><td>09/15 (Tue)</td><td>Regression</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L2-Regression.pdf">L2</a></td><td></td></tr>
 <tr><td>09/17 (Thu)</td><td>Regression</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L2-Regression.pdf">L2</a></td><td></td></tr>
-<tr><td rowspan="2">3</td><td>09/22 (Tue)</td><td>Dimensionality reduction</td><td></td><td></td></tr>
-<tr><td>09/24 (Thu)</td><td>TA Lecture: Introduction to Coding CLI</td><td></td><td><a href="{{ '/assignments/HW1/' | relative_url }}">HW1</a> release</td></tr>
+<tr><td rowspan="2">3</td><td>09/22 (Tue)</td><td>Dimensionality reduction</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L3-Dimension-Reduction.pdf">L3</a></td><td></td></tr>
+<tr><td>09/24 (Thu)</td><td>TA Lecture: Introduction to Coding Agents</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/TA-Coding-Agents.pdf">TA</a><br><a href="{{ '/assets/pdf/HW1_Intro.pdf' | relative_url }}">HW1 Intro</a></td><td><a href="{{ '/assignments/HW1/' | relative_url }}">HW1</a> release</td></tr>
 <tr><td rowspan="2">4</td><td>09/29 (Tue)</td><td>Dimensionality reduction, Clustering</td><td></td><td></td></tr>
 <tr><td>10/01 (Thu)</td><td>Clustering</td><td></td><td><a href="{{ '/project/' | relative_url }}">Project</a> release; HW1 pre-registration due 09/30</td></tr>
 <tr class="exam"><td rowspan="2">5</td><td>10/06 (Tue)</td><td>Midterm 1</td><td></td><td></td></tr>

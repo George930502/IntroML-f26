@@ -11,7 +11,7 @@ nav_order: 1
 <span class="text-red-300">*Final Report and Code Submission Deadline*: **10/8 11:59 PM**</span>
 {: .text-center }
 
-[Handout (PDF)]({{ '/assets/pdf/HW1.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw1_starter.ipynb' | relative_url }}) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
+[HW1 Spec (PDF)]({{ '/assets/pdf/HW1.pdf' | relative_url }}) · [HW1 Intro Slides (PDF)]({{ '/assets/pdf/HW1_Intro.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw1_starter.ipynb' | relative_url }}) · [Dataset (tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/tracks.csv)
 {: .text-center }
 
 ## Introduction
