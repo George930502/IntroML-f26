@@ -74,7 +74,7 @@ Detailed format requirements will be announced on eeclass.
 
 | Date                                  | Event                                            |
 | :------------------------------------ | :----------------------------------------------- |
-| 10/01 (Thu)                           | Project release                                  |
+| 10/08 (Thu)                           | Project release                                  |
 | 11/03 (Tue)                           | Proposal due and 3-minute proposal presentations |
 | 12/17 (Thu), 12/22 (Tue), 12/24 (Thu) | Final presentations                              |
 | TBA                                   | Final report and code due                        |
