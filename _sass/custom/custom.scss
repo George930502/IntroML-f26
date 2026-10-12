@@ -105,3 +105,22 @@ iframe {
 .genre-table td {
   text-align: center;
 }
+
+// Keep short items (deadlines, link-bar entries) on one line
+.nowrap {
+  white-space: nowrap;
+}
+
+// Wide display equations scroll inside their box instead of overflowing it
+mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// Link-bar entries stay whole on wide screens; on phones they may wrap
+@media (min-width: 31.25rem) {
+  .nowrap-wide {
+    white-space: nowrap;
+  }
+}

@@ -12,7 +12,7 @@ math: true
 <span class="text-red-300">_Final Report and Code Submission Deadline_: **11/3 11:59 PM**</span>
 {: .text-center }
 
-[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }}) · [Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv) · [Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }}) · [Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)
+<span class="nowrap-wide">[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }})</span> · <span class="nowrap-wide">[Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)</span>
 {: .text-center }
 
 ## Introduction
@@ -49,8 +49,8 @@ You are expected to connect each conclusion to evidence, <span class="text-red-3
 
    <table>
    <tr><th>Submission</th><th>Deadline</th></tr>
-   <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW2_pre_report_{student_id}.pdf</span></td><td>10/20 11:59 PM</td></tr>
-   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td rowspan="3">11/3 11:59 PM</td></tr>
+   <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW2_pre_report_{student_id}.pdf</span></td><td class="nowrap">10/20 11:59 PM</td></tr>
+   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td class="nowrap" rowspan="3">11/3 11:59 PM</td></tr>
    <tr><td>An <strong>.ipynb notebook</strong> containing all code needed to reproduce the results reported in your submission. File name: <span class="text-red-300">HW2_code_{student_id}.ipynb</span></td></tr>
    <tr><td>The <strong>AI-use log</strong> document. File name: <span class="text-red-300">HW2_ai_use_{student_id}.md</span></td></tr>
    </table>
@@ -167,7 +167,11 @@ F_1^{\text{macro}} = \frac{1}{C}\sum_{c=1}^{C} F_{1,c}
 $$
 
 $$
-P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)}, \qquad R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)}, \qquad F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}
+P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)}, \qquad R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)},
+$$
+
+$$
+F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}
 $$
 
 <span class="text-red-300">When the classes are **imbalanced**, accuracy can hide almost everything about the rare classes.</span>
