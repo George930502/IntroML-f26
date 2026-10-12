@@ -83,3 +83,25 @@ iframe {
 .main-content ol ol > li::before {
   content: counter(step-counter, lower-alpha) ".";
 }
+
+// Light-blue definition boxes (HW2 handout)
+.method-box {
+  background-color: #e8f0fb;
+  border: 1px solid #4a7ebb;
+  padding: 0.25rem 1rem;
+  margin: 1rem 0;
+
+  .method-title {
+    color: #1f4e79;
+    font-weight: bold;
+    margin-top: 0.75rem;
+  }
+}
+
+// HW2 genre-count table: gray name rows
+.genre-table tr.names td {
+  background-color: #d9d9d9;
+}
+.genre-table td {
+  text-align: center;
+}
