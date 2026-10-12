@@ -12,7 +12,7 @@ math: true
 <span class="text-red-300">_Final Report and Code Submission Deadline_: **11/3 11:59 PM**</span>
 {: .text-center }
 
-[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }}) · [Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }}) · [Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv) · [Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }}) · [Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)
+<span class="nowrap-wide">[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }})</span> · <span class="nowrap-wide">[Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)</span>
 {: .text-center }
 
 ## Introduction
@@ -49,8 +49,8 @@ You are expected to connect each conclusion to evidence, <span class="text-red-3
 
    <table>
    <tr><th>Submission</th><th>Deadline</th></tr>
-   <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW2_pre_report_{student_id}.pdf</span></td><td>10/20 11:59 PM</td></tr>
-   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td rowspan="3">11/3 11:59 PM</td></tr>
+   <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW2_pre_report_{student_id}.pdf</span></td><td class="nowrap">10/20 11:59 PM</td></tr>
+   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td class="nowrap" rowspan="3">11/3 11:59 PM</td></tr>
    <tr><td>An <strong>.ipynb notebook</strong> containing all code needed to reproduce the results reported in your submission. File name: <span class="text-red-300">HW2_code_{student_id}.ipynb</span></td></tr>
    <tr><td>The <strong>AI-use log</strong> document. File name: <span class="text-red-300">HW2_ai_use_{student_id}.md</span></td></tr>
    </table>
@@ -120,9 +120,7 @@ A single validation set is small, and the score depends on which tracks happen t
 
 For $$j = 1, \dots, k$$, the model $$f^{(-j)}$$ is trained on $$D \setminus D_j$$ and scored on $$D_j$$, giving a score $$s_j$$. The cross-validated estimate and its spread are
 
-$$
-\bar{s} = \frac{1}{k}\sum_{j=1}^{k} s_j, \qquad \mathrm{sd} = \sqrt{\frac{1}{k-1}\sum_{j=1}^{k}\left(s_j - \bar{s}\right)^2}
-$$
+<div class="eq-row">\[\bar{s} = \frac{1}{k}\sum_{j=1}^{k} s_j,\] \[\mathrm{sd} = \sqrt{\frac{1}{k-1}\sum_{j=1}^{k}\left(s_j - \bar{s}\right)^2}\]</div>
 
 **Every training track is used for validation exactly once**. To compare two settings fairly, evaluate both on the same folds.
 </div>
@@ -154,9 +152,7 @@ $$
 \mathrm{Acc} = \frac{1}{n}\sum_{i=1}^{n} \mathbf{1}\left[\hat{y}_i = y_i\right]
 $$
 
-$$
-P_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c}, \qquad R_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c}, \qquad F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}
-$$
+<div class="eq-row">\[P_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c},\] \[R_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c},\] \[F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}\]</div>
 
 Where $$P$$ is precision, $$R$$ is recall, and $$F_1$$ refers to $$F_1$$ score. If a denominator is 0 (for example, a genre that is never predicted), the value is defined as 0.
 
@@ -166,9 +162,7 @@ $$
 F_1^{\text{macro}} = \frac{1}{C}\sum_{c=1}^{C} F_{1,c}
 $$
 
-$$
-P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)}, \qquad R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)}, \qquad F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}
-$$
+<div class="eq-row">\[P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)},\] \[R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)},\] \[F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}\]</div>
 
 <span class="text-red-300">When the classes are **imbalanced**, accuracy can hide almost everything about the rare classes.</span>
 </div>
@@ -254,7 +248,7 @@ In a two-class problem, one class is called _positive_ (here, "hip-hop") and the
 | **true positive class** |  TP (true positives)   |  FN (false negatives)  |
 | **true negative class** |  FP (false positives)  |  TN (true negatives)   |
 
-With $$N$$ = TP + FN + FP + TN:
+With $$N = \mathrm{TP} + \mathrm{FN} + \mathrm{FP} + \mathrm{TN}$$:
 
 $$
 \mathrm{Acc} = \frac{\mathrm{TP} + \mathrm{TN}}{N}
@@ -272,9 +266,7 @@ $$
 \mathrm{FPR} = \frac{\mathrm{FP}}{\mathrm{FP} + \mathrm{TN}} = 1 - \mathrm{TNR}
 $$
 
-$$
-\mathrm{PPV}\ (\text{precision}) = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}}, \qquad \mathrm{NPV} = \frac{\mathrm{TN}}{\mathrm{TN} + \mathrm{FN}}
-$$
+<div class="eq-row">\[\mathrm{PPV}\ (\text{precision}) = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}},\] \[\mathrm{NPV} = \frac{\mathrm{TN}}{\mathrm{TN} + \mathrm{FN}}\]</div>
 
 </div>
 
@@ -293,7 +285,7 @@ It is high only when both precision and recall are high, and it does not use TN.
 <div class="method-box" markdown="1">
 <p class="method-title">Scores, thresholds, the ROC curve, and its AUC</p>
 
-Most classifiers output a score $$s(x)$$ (e.g., a predicted probability of the positive class) and predict "positive" when $$s(x) \ge t$$ for a threshold $$t$$. Each threshold gives its own TPR($$t$$) and FPR($$t$$). The **ROC curve** plots TPR($$t$$) against FPR($$t$$) as $$t$$ moves from $$+\infty$$ (nothing is positive, the point (0, 0)) to $$-\infty$$ (everything is positive, the point (1, 1)). The area under it is
+Most classifiers output a score $$s(x)$$ (e.g., a predicted probability of the positive class) and predict "positive" when $$s(x) \ge t$$ for a threshold $$t$$. Each threshold gives its own $$\mathrm{TPR}(t)$$ and $$\mathrm{FPR}(t)$$. The **ROC curve** plots $$\mathrm{TPR}(t)$$ against $$\mathrm{FPR}(t)$$ as $$t$$ moves from $$+\infty$$ (nothing is positive, the point (0, 0)) to $$-\infty$$ (everything is positive, the point (1, 1)). The area under it is
 
 $$
 \mathrm{AUC} = \int_0^1 \mathrm{TPR}\; d(\mathrm{FPR})
@@ -301,9 +293,7 @@ $$
 
 Equivalently, AUC is the probability that a randomly chosen positive example $$x^+$$ receives a higher score than a randomly chosen negative example $$x^-$$. On $$n_+$$ positive and $$n_-$$ negative examples it is computed as
 
-$$
-\mathrm{AUC} = \frac{1}{n_+ n_-}\sum_{i \in \text{pos}}\ \sum_{j \in \text{neg}} u_{ij}, \qquad u_{ij} = \begin{cases} 1 & s(x_i) > s(x_j), \\ \tfrac{1}{2} & s(x_i) = s(x_j), \\ 0 & s(x_i) < s(x_j). \end{cases}
-$$
+<div class="eq-row">\[\mathrm{AUC} = \frac{1}{n_+ n_-}\sum_{i \in \text{pos}}\ \sum_{j \in \text{neg}} u_{ij},\] \[u_{ij} = \begin{cases} 1 & s(x_i) > s(x_j), \\ \tfrac{1}{2} & s(x_i) = s(x_j), \\ 0 & s(x_i) < s(x_j). \end{cases}\]</div>
 
 A random score gives AUC = 0.5, and a perfect ranking gives 1. For many classes, a **one-versus-rest** AUC treats one genre as positive and all others as negative, using the predicted probability of that genre as the score.
 </div>
