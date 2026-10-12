@@ -79,9 +79,13 @@ iframe {
   }
 }
 
-// Nested numbered lists read a., b., ... (HW handouts)
-.main-content ol ol > li::before {
-  content: counter(step-counter, lower-alpha) ".";
+// Numbered lists read 1., 2., ... and nested ones a., b., ... (as in the HW handout PDFs).
+// Same selectors as the theme, declared later, so these win.
+.main-content ol > li::before {
+  content: counter(step-counter) ".";
+}
+.main-content ol > li ol > li::before {
+  content: counter(sub-counter, lower-alpha) ".";
 }
 
 // Light-blue definition boxes (HW2 handout)
@@ -122,5 +126,14 @@ mjx-container[display="true"] {
 @media (min-width: 31.25rem) {
   .nowrap-wide {
     white-space: nowrap;
+  }
+}
+
+// Even spacing between handout sub-items (a., b., ...), whether or not an item has several paragraphs
+.main-content ol > li ol > li {
+  margin-bottom: 0.75rem;
+
+  > p:last-child {
+    margin-bottom: 0;
   }
 }

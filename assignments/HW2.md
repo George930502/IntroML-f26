@@ -258,7 +258,7 @@ In a two-class problem, one class is called _positive_ (here, "hip-hop") and the
 | **true positive class** |  TP (true positives)   |  FN (false negatives)  |
 | **true negative class** |  FP (false positives)  |  TN (true negatives)   |
 
-With $$N$$ = TP + FN + FP + TN:
+With $$N = \mathrm{TP} + \mathrm{FN} + \mathrm{FP} + \mathrm{TN}$$:
 
 $$
 \mathrm{Acc} = \frac{\mathrm{TP} + \mathrm{TN}}{N}
@@ -297,7 +297,7 @@ It is high only when both precision and recall are high, and it does not use TN.
 <div class="method-box" markdown="1">
 <p class="method-title">Scores, thresholds, the ROC curve, and its AUC</p>
 
-Most classifiers output a score $$s(x)$$ (e.g., a predicted probability of the positive class) and predict "positive" when $$s(x) \ge t$$ for a threshold $$t$$. Each threshold gives its own TPR($$t$$) and FPR($$t$$). The **ROC curve** plots TPR($$t$$) against FPR($$t$$) as $$t$$ moves from $$+\infty$$ (nothing is positive, the point (0, 0)) to $$-\infty$$ (everything is positive, the point (1, 1)). The area under it is
+Most classifiers output a score $$s(x)$$ (e.g., a predicted probability of the positive class) and predict "positive" when $$s(x) \ge t$$ for a threshold $$t$$. Each threshold gives its own $$\mathrm{TPR}(t)$$ and $$\mathrm{FPR}(t)$$. The **ROC curve** plots $$\mathrm{TPR}(t)$$ against $$\mathrm{FPR}(t)$$ as $$t$$ moves from $$+\infty$$ (nothing is positive, the point (0, 0)) to $$-\infty$$ (everything is positive, the point (1, 1)). The area under it is
 
 $$
 \mathrm{AUC} = \int_0^1 \mathrm{TPR}\; d(\mathrm{FPR})
