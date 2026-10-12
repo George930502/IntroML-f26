@@ -120,9 +120,7 @@ A single validation set is small, and the score depends on which tracks happen t
 
 For $$j = 1, \dots, k$$, the model $$f^{(-j)}$$ is trained on $$D \setminus D_j$$ and scored on $$D_j$$, giving a score $$s_j$$. The cross-validated estimate and its spread are
 
-$$
-\bar{s} = \frac{1}{k}\sum_{j=1}^{k} s_j, \qquad \mathrm{sd} = \sqrt{\frac{1}{k-1}\sum_{j=1}^{k}\left(s_j - \bar{s}\right)^2}
-$$
+<div class="eq-row">\[\bar{s} = \frac{1}{k}\sum_{j=1}^{k} s_j,\] \[\mathrm{sd} = \sqrt{\frac{1}{k-1}\sum_{j=1}^{k}\left(s_j - \bar{s}\right)^2}\]</div>
 
 **Every training track is used for validation exactly once**. To compare two settings fairly, evaluate both on the same folds.
 </div>
@@ -154,9 +152,7 @@ $$
 \mathrm{Acc} = \frac{1}{n}\sum_{i=1}^{n} \mathbf{1}\left[\hat{y}_i = y_i\right]
 $$
 
-$$
-P_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c}, \qquad R_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c}, \qquad F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}
-$$
+<div class="eq-row">\[P_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c},\] \[R_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c},\] \[F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}\]</div>
 
 Where $$P$$ is precision, $$R$$ is recall, and $$F_1$$ refers to $$F_1$$ score. If a denominator is 0 (for example, a genre that is never predicted), the value is defined as 0.
 
@@ -166,13 +162,7 @@ $$
 F_1^{\text{macro}} = \frac{1}{C}\sum_{c=1}^{C} F_{1,c}
 $$
 
-$$
-P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)}, \qquad R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)},
-$$
-
-$$
-F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}
-$$
+<div class="eq-row">\[P^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FP}_c)},\] \[R^{\text{micro}} = \frac{\sum_c \mathrm{TP}_c}{\sum_c (\mathrm{TP}_c + \mathrm{FN}_c)},\] \[F_1^{\text{micro}} = \frac{2 P^{\text{micro}} R^{\text{micro}}}{P^{\text{micro}} + R^{\text{micro}}}\]</div>
 
 <span class="text-red-300">When the classes are **imbalanced**, accuracy can hide almost everything about the rare classes.</span>
 </div>
@@ -276,9 +266,7 @@ $$
 \mathrm{FPR} = \frac{\mathrm{FP}}{\mathrm{FP} + \mathrm{TN}} = 1 - \mathrm{TNR}
 $$
 
-$$
-\mathrm{PPV}\ (\text{precision}) = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}}, \qquad \mathrm{NPV} = \frac{\mathrm{TN}}{\mathrm{TN} + \mathrm{FN}}
-$$
+<div class="eq-row">\[\mathrm{PPV}\ (\text{precision}) = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}},\] \[\mathrm{NPV} = \frac{\mathrm{TN}}{\mathrm{TN} + \mathrm{FN}}\]</div>
 
 </div>
 
@@ -305,9 +293,7 @@ $$
 
 Equivalently, AUC is the probability that a randomly chosen positive example $$x^+$$ receives a higher score than a randomly chosen negative example $$x^-$$. On $$n_+$$ positive and $$n_-$$ negative examples it is computed as
 
-$$
-\mathrm{AUC} = \frac{1}{n_+ n_-}\sum_{i \in \text{pos}}\ \sum_{j \in \text{neg}} u_{ij}, \qquad u_{ij} = \begin{cases} 1 & s(x_i) > s(x_j), \\ \tfrac{1}{2} & s(x_i) = s(x_j), \\ 0 & s(x_i) < s(x_j). \end{cases}
-$$
+<div class="eq-row">\[\mathrm{AUC} = \frac{1}{n_+ n_-}\sum_{i \in \text{pos}}\ \sum_{j \in \text{neg}} u_{ij},\] \[u_{ij} = \begin{cases} 1 & s(x_i) > s(x_j), \\ \tfrac{1}{2} & s(x_i) = s(x_j), \\ 0 & s(x_i) < s(x_j). \end{cases}\]</div>
 
 A random score gives AUC = 0.5, and a perfect ranking gives 1. For many classes, a **one-versus-rest** AUC treats one genre as positive and all others as negative, using the predicted probability of that genre as the score.
 </div>

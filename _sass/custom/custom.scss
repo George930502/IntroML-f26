@@ -147,3 +147,24 @@ mjx-container[display="true"] {
 .main-content li code {
   white-space: nowrap;
 }
+
+// Several equations on one line (as in the PDF); they wrap onto separate lines on narrow screens
+.eq-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5em;
+  margin: 1em 0;
+
+  mjx-container[display="true"] {
+    margin: 0.4em 0 !important;
+  }
+}
+
+// Phones: slightly smaller display math so single long equations fit
+@media (max-width: 31.25rem) {
+  mjx-container[display="true"] {
+    font-size: 85%;
+  }
+}
