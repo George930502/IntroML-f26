@@ -12,7 +12,7 @@ math: true
 <span class="text-red-300">_Final Report and Code Submission Deadline_: **11/3 11:59 PM**</span>
 {: .text-center }
 
-<span class="nowrap-wide">[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }})</span> · <span class="nowrap-wide">[Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)</span>
+<span class="nowrap-wide">[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[HW2 Intro Slides (PDF)]({{ '/assets/pdf/HW2_Intro.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }})</span> · <span class="nowrap-wide">[Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)</span>
 {: .text-center }
 
 ## Introduction
