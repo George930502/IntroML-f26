@@ -207,6 +207,6 @@ To prevent grader bias, each section is assigned to a dedicated TA who evaluates
 
 **Demo (50%)**
 
-The demo will take place on **Tuesday, November 10, in the evening**, together with the HW2 demo. Further details, including the exact time, location, and demo format, will be announced later.
+The demo will take place on **Thursday, November 12, in the evening**, together with the HW2 demo. Further details, including the exact time, location, and demo format, will be announced later.
 
 Feel free to ask questions! For homework-related issues, please post on the eeclass discussion forum, and the TAs will reply promptly. For personal matters or private inquiries, you can reach the TA at <george930502@gapp.nthu.edu.tw>.
