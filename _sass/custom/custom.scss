@@ -133,7 +133,17 @@ mjx-container[display="true"] {
 .main-content ol > li ol > li {
   margin-bottom: 0.75rem;
 
+  > p:first-child {
+    margin-top: 0;
+  }
+
   > p:last-child {
     margin-bottom: 0;
   }
+}
+
+// Short inline code (scikit-learn, file names) never breaks at its hyphen
+.main-content p code,
+.main-content li code {
+  white-space: nowrap;
 }
