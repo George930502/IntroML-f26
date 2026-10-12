@@ -30,7 +30,7 @@ Before trusting any classifier, the team needs to answer questions such as:
 
 Your goal in this assignment is to answer these questions with evidence.
 
-You will evaluate the classifier families covered in class: <span class="text-red-300">Nearest-neighbor classifiers, Bayesian classifiers, decision trees and their ensembles, linear discriminant analysis, and support vector machines.</span>
+You will evaluate the classifier families covered in class: <span class="text-red-300">Nearest-neighbor classifiers, Bayesian classifiers, decision trees and their ensembles, and support vector machines.</span>
 
 What matters most is not writing the algorithms from scratch, but **designing the evaluation protocol** that every comparison depends on, comparing how the algorithms behave through each **model's inductive biases**, and **justifying when each approach is appropriate to use.** The purpose of the homework is **not to obtain the highest predictive accuracy**, instead, you are expected to <span class="text-red-300">**evaluate each model honestly rather than evaluate through the flawed testing**</span>.
 
