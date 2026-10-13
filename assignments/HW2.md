@@ -9,7 +9,7 @@ math: true
 # Homework 2: Classify a Music Catalog
 
 <span class="text-red-300">_Pre-Registration Report Submission Deadline_: **10/20 11:59 PM**</span>  
-<span class="text-red-300">_Final Report and Code Submission Deadline_: **11/3 11:59 PM**</span>
+<span class="text-red-300">_Final Report and Code Submission Deadline_: **10/29 11:59 PM**</span>
 {: .text-center }
 
 <span class="nowrap-wide">[HW2 Spec (PDF)]({{ '/assets/pdf/HW2_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[HW2 Intro Slides (PDF)]({{ '/assets/pdf/HW2_Intro.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw2_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (processed_tracks.csv)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/processed_tracks.csv)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_processed_tracks.py' | relative_url }})</span> · <span class="nowrap-wide">[Assigned reading: Model Selection and Evaluation (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L12-Model-Selection-and-Evaluation.pdf)</span>
@@ -50,7 +50,7 @@ You are expected to connect each conclusion to evidence, <span class="text-red-3
    <table>
    <tr><th>Submission</th><th>Deadline</th></tr>
    <tr><td>A <strong>pre-registration report</strong> in the PDF format, up to <strong>2 pages.</strong> File name: <span class="text-red-300">HW2_pre_report_{student_id}.pdf</span></td><td class="nowrap">10/20 11:59 PM</td></tr>
-   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td class="nowrap" rowspan="3">11/3 11:59 PM</td></tr>
+   <tr><td>A <strong>final report</strong> in the PDF format, up to <strong>15 pages.</strong> File name: <span class="text-red-300">HW2_final_report_{student_id}.pdf</span></td><td class="nowrap" rowspan="3">10/29 11:59 PM</td></tr>
    <tr><td>An <strong>.ipynb notebook</strong> containing all code needed to reproduce the results reported in your submission. File name: <span class="text-red-300">HW2_code_{student_id}.ipynb</span></td></tr>
    <tr><td>The <strong>AI-use log</strong> document. File name: <span class="text-red-300">HW2_ai_use_{student_id}.md</span></td></tr>
    </table>
@@ -183,7 +183,7 @@ $$
 
 Each classifier family introduced in class relies on distinct **inductive biases**, with **hyperparameters** controlling its decision dynamics.
 
-In this section, you will systematically **evaluate five classifier families** one at a time under the following protocol:
+In this section, you will systematically **evaluate four classifier families** one at a time under the following protocol:
 
 - Fit all feature transformers, scalers, and other preprocessing steps strictly on the training partition of each cross-validation fold, transforming validation / test folds downstream to prevent data leakage.
 - Explain your observed empirical results through the lens of how the underlying algorithm functions, backing your claims directly with your reported quantitative scores.
@@ -349,6 +349,6 @@ To prevent grader bias, each section is assigned to a dedicated TA who evaluates
 
 **Demo (50%)**
 
-The demo will take place on **Thursday, November 12, in the evening**, together with the HW1 demo. Further details, including the exact time, location, and demo format, will be announced later.
+The HW2 demo will be together with the HW1 demo. Further details, including the exact time, location, and demo format, will be announced later.
 
 Feel free to ask questions! For homework-related issues, please post on the eeclass discussion forum, and the TAs will reply promptly. For personal matters or private inquiries, you can reach the TA at <george930502@gapp.nthu.edu.tw>.

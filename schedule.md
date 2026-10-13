@@ -30,11 +30,11 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 <tr><td rowspan="2">7</td><td>10/20 (Tue)</td><td>SVM, Perceptron</td><td></td><td>HW2 pre-registration due</td></tr>
 <tr><td>10/22 (Thu)</td><td>Neural networks</td><td></td><td></td></tr>
 <tr><td rowspan="2">8</td><td>10/27 (Tue)</td><td>Neural networks</td><td></td><td></td></tr>
-<tr><td>10/29 (Thu)</td><td>TA Lecture: Introduction to PyTorch</td><td></td><td><a href="{{ '/assignments/HW3/' | relative_url }}">HW3</a> release</td></tr>
-<tr class="project"><td rowspan="2">9</td><td>11/03 (Tue)</td><td>Project proposal presentations</td><td></td><td>HW2 due</td></tr>
+<tr><td>10/29 (Thu)</td><td>TA Lecture: Introduction to PyTorch</td><td></td><td>HW2 due<br><a href="{{ '/assignments/HW3/' | relative_url }}">HW3</a> release</td></tr>
+<tr class="project"><td rowspan="2">9</td><td>11/03 (Tue)</td><td>Project proposal presentations</td><td></td><td></td></tr>
 <tr><td>11/05 (Thu)</td><td>Deep learning</td><td></td><td></td></tr>
 <tr class="exam"><td rowspan="2">10</td><td>11/10 (Tue)</td><td>Midterm 2</td><td></td><td></td></tr>
-<tr><td>11/12 (Thu)</td><td>Deep learning</td><td></td><td>HW1 + HW2 demo</td></tr>
+<tr><td>11/12 (Thu)</td><td>Deep learning</td><td></td><td></td></tr>
 <tr><td rowspan="2">11</td><td>11/17 (Tue)</td><td>Convolutional neural networks</td><td></td><td></td></tr>
 <tr><td>11/19 (Thu)</td><td>Recurrent neural networks</td><td></td><td>HW3 due<br>TA Lecture: How to Read a Research Paper (online video)</td></tr>
 <tr><td rowspan="2">12</td><td>11/24 (Tue)</td><td>Recurrent neural networks, Transformer</td><td></td><td><a href="{{ '/assignments/HW4/' | relative_url }}">HW4</a> release</td></tr>
