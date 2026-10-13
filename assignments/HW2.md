@@ -98,7 +98,7 @@ Reminder: Unless a question says otherwise, use only these 13 audio features as 
 Your pre-registration is graded on **completeness and specificity**, not on whether your predictions are correct.
 
 - Submitted by _October 20_: Up to **5** points.
-- Submitted between _October 20 and November 3_: Up to **2** points.
+- Submitted between _October 20 and October 29_: Up to **2** points.
 - Not submitted: Section 2 receives **0** points.
 
 Every number in _Sections 3 and 4_ comes from an evaluation protocol. **The goal of this section is to build the protocol before you train any classifiers.**
