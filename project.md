@@ -42,7 +42,7 @@ Team up with students from the Department of Early Childhood Education (KEE 1003
 
 ## Proposal
 
-Hand in a proposal and give a 3-minute presentation in class on 11/03. The proposal should describe
+Upload a 3-minute proposal video by 11/03 (Tue). There is no written proposal and no in-class presentation. The video should cover
 
 - Title and team members
 - Motivation and problem statement
@@ -75,6 +75,6 @@ Detailed format requirements will be announced on eeclass.
 | Date                                  | Event                                            |
 | :------------------------------------ | :----------------------------------------------- |
 | 10/08 (Thu)                           | Project release                                  |
-| 11/03 (Tue)                           | Proposal due and 3-minute proposal presentations |
+| 11/03 (Tue)                           | Proposal video due                               |
 | 12/17 (Thu), 12/22 (Tue), 12/24 (Thu) | Final presentations                              |
 | TBA                                   | Final report and code due                        |
