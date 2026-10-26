@@ -42,7 +42,7 @@ Team up with students from the Department of Early Childhood Education (KEE 1003
 
 ## Proposal
 
-Upload a 3-minute proposal video by 11/03 (Tue). There is no written proposal and no in-class presentation. The video should cover
+Upload a 3-minute proposal video by 11/03 (Tue). The video should cover
 
 - Title and team members
 - Motivation and problem statement
