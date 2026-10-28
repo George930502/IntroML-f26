@@ -32,7 +32,7 @@ Tuesdays 10:00–12:00, Thursdays 10:00–11:00, C.L.Liu 炯朗 B1. Lecture slid
 <tr><td rowspan="2">8</td><td>10/27 (Tue)</td><td>Neural networks</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L8-Neural-Networks.pdf">L8</a></td><td></td></tr>
 <tr><td>10/29 (Thu)</td><td>TA Lecture: Introduction to PyTorch</td><td><a href="https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/TA-PyTorch.pdf">TA Lecture</a></td><td>HW2 due<br><a href="{{ '/assignments/HW3/' | relative_url }}">HW3</a> release</td></tr>
 <tr><td rowspan="2">9</td><td>11/03 (Tue)</td><td>Deep learning</td><td></td><td>Project proposal presentations due</td></tr>
-<tr><td>11/05 (Thu)</td><td>Deep learning</td><td></td><td></td></tr>
+<tr><td>11/05 (Thu)</td><td>Deep learning</td><td></td><td>HW3 pre-registration due</td></tr>
 <tr class="exam"><td rowspan="2">10</td><td>11/10 (Tue)</td><td>Midterm 2</td><td></td><td></td></tr>
 <tr><td>11/12 (Thu)</td><td>Deep learning</td><td></td><td></td></tr>
 <tr><td rowspan="2">11</td><td>11/17 (Tue)</td><td>Convolutional neural networks</td><td></td><td></td></tr>
