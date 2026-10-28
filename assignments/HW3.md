@@ -12,7 +12,7 @@ math: true
 **Final Report and Code Submission Deadline: 11/19 11:59 PM**
 {: .text-center }
 
-<span class="nowrap-wide">[HW3 Spec (PDF)]({{ '/assets/pdf/HW3_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw3_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (oracle_chars.npz)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/oracle_chars.npz)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_oracle_chars.py' | relative_url }})</span> · <span class="nowrap-wide">[Lecture slides: Neural Networks (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/L8-Neural-Networks.pdf)</span> · <span class="nowrap-wide">[PyTorch tutorial slides (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/TA-PyTorch.pdf)</span>
+<span class="nowrap-wide">[HW3 Spec (PDF)]({{ '/assets/pdf/HW3_Spec.pdf' | relative_url }})</span> · <span class="nowrap-wide">[Starter notebook]({{ '/assets/notebooks/hw3_starter.ipynb' | relative_url }})</span> · <span class="nowrap-wide">[Dataset (oracle_chars.npz)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/data/oracle_chars.npz)</span> · <span class="nowrap-wide">[Build script]({{ '/assets/code/build_oracle_chars.py' | relative_url }})</span> · <span class="nowrap-wide">[PyTorch tutorial slides (PDF)](https://github.com/nthu-cs-hmilab/I2ML-2026/releases/download/slides/TA-PyTorch.pdf)</span>
 {: .text-center }
 
 ## Introduction
