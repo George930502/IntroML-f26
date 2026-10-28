@@ -170,3 +170,25 @@ mjx-container[display="true"] {
     font-size: 85% !important;
   }
 }
+
+// HW3 character table: gray header column, centered cells
+.char-table th {
+  background-color: #d9d9d9;
+}
+.char-table td {
+  text-align: center;
+}
+
+// HW3 handout: a list item boxed in yellow (Section 2 Question 3)
+.main-content li.box-item {
+  background-color: #fff2cc;
+  border: 1px solid #bf9000;
+  padding: 0.25rem 0.5rem;
+}
+
+// Yellow highlights as in the HW3 handout
+mark {
+  background-color: #ffff00;
+  color: inherit;
+  padding: 0;
+}
